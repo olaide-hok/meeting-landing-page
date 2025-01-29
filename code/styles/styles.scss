@@ -1,0 +1,471 @@
+@use "functions" as *;
+
+// colors
+$cyan-300: #8fe3f9;
+$cyan-600: #4d96a9;
+$cyan-900: #71c0d4;
+$purple-300: #d9b8ff;
+$purple-600: #855fb1;
+$purple-900: #b18bdd;
+$slate-300: #d1d1df;
+$slate-600: #87879d;
+$slate-900: #28283d;
+$white: #fafafa;
+
+// Typography
+$font-family: "Red Hat Display", serif;
+
+$text-preset-1-font-family: $font-family;
+$text-preset-1-d-font-size: rem(64px);
+$text-preset-1-t-font-size: rem(48px);
+$text-preset-1-m-font-size: rem(40px);
+$text-preset-1-font-weight: 900;
+$text-preset-1-line-height: 110%;
+$text-preset-1-letter-spacing: 0;
+
+$text-preset-2-font-family: $font-family;
+$text-preset-2-d-font-size: rem(40px);
+$text-preset-2-t-font-size: rem(36px);
+$text-preset-2-m-font-size: rem(32px);
+$text-preset-2-font-weight: 900;
+$text-preset-2-line-height: 110%;
+$text-preset-2-letter-spacing: 0;
+
+$text-preset-3-font-family: $font-family;
+$text-preset-3-d-font-size: rem(16px);
+$text-preset-3-t-font-size: rem(14px);
+$text-preset-3-m-font-size: rem(12px);
+$text-preset-3-font-weight: 800;
+$text-preset-3-line-height: 110%;
+$text-preset-3-letter-spacing: rem(4px);
+
+$text-preset-4-font-family: $font-family;
+$text-preset-4-d-font-size: rem(18px);
+$text-preset-4-t-font-size: rem(16px);
+$text-preset-4-font-weight: 400;
+$text-preset-4-line-height: 150%;
+$text-preset-4-letter-spacing: rem(0);
+
+$text-preset-5-font-family: $font-family;
+$text-preset-5-font-size: rem(16px);
+$text-preset-5-font-weight: 700;
+$text-preset-5-line-height: 150%;
+$text-preset-5-letter-spacing: rem(0);
+
+// Spacings
+$spacing-1400: rem(112px);
+$spacing-1000: rem(80px);
+$spacing-900: rem(72px);
+$spacing-800: rem(64px);
+$spacing-700: rem(56px);
+$spacing-500: rem(40px);
+$spacing-400: rem(32px);
+$spacing-300: rem(24px);
+$spacing-200: rem(16px);
+$spacing-100: rem(8px);
+$spacing-50: rem(4px);
+
+// Utility classes
+.text-preset-1 {
+  font-family: $text-preset-1-font-family;
+  font-size: $text-preset-1-m-font-size;
+  font-weight: $text-preset-1-font-weight;
+  letter-spacing: $text-preset-1-letter-spacing;
+  line-height: $text-preset-1-line-height;
+}
+
+.text-preset-2 {
+  font-family: $text-preset-2-font-family;
+  font-size: $text-preset-2-m-font-size;
+  font-weight: $text-preset-2-font-weight;
+  letter-spacing: $text-preset-2-letter-spacing;
+  line-height: $text-preset-2-line-height;
+}
+
+.text-preset-3 {
+  font-family: $text-preset-3-font-family;
+  font-size: $text-preset-3-m-font-size;
+  font-weight: $text-preset-3-font-weight;
+  letter-spacing: $text-preset-3-letter-spacing;
+  line-height: $text-preset-3-line-height;
+}
+
+.text-preset-4 {
+  font-family: $text-preset-4-font-family;
+  font-size: $text-preset-4-d-font-size;
+  font-weight: $text-preset-4-font-weight;
+  letter-spacing: $text-preset-4-letter-spacing;
+  line-height: $text-preset-4-line-height;
+}
+
+.text-preset-5 {
+  font-family: $text-preset-5-font-family;
+  font-size: $text-preset-5-font-size;
+  font-weight: $text-preset-5-font-weight;
+  letter-spacing: $text-preset-5-letter-spacing;
+  line-height: $text-preset-5-line-height;
+}
+
+.text-white {
+  color: $white;
+}
+
+// Buttons
+.button-blue {
+  background-color: $cyan-600;
+  border-style: none;
+  border-radius: rem(29px);
+  color: $white;
+  padding: $spacing-200 $spacing-500;
+  width: fit-content;
+
+  span {
+    color: $cyan-300;
+    margin-left: 0.2em;
+  }
+
+  &:hover,
+  :focus {
+    background-color: $cyan-900;
+    cursor: pointer;
+  }
+}
+
+.button-purple {
+  background-color: $purple-600;
+  border-style: none;
+  border-radius: rem(29px);
+  color: $white;
+  padding: $spacing-200 $spacing-500;
+  width: fit-content;
+
+  span {
+    color: $purple-300;
+    margin-left: 0.2em;
+  }
+
+  &:hover,
+  :focus {
+    background-color: $purple-900;
+    cursor: pointer;
+  }
+}
+
+//  Number
+.number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .stick {
+    width: 1px; /* Thin line */
+    height: 80px; /* Height of the line */
+    background-color: $slate-300;
+  }
+  .circle {
+    background-color: $white;
+    font-family: $font-family;
+    font-size: $text-preset-5-font-size;
+    border: 1px solid $slate-300;
+    border-radius: 50%;
+    color: $slate-600;
+    width: rem(56px);
+    height: rem(56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.nav {
+  padding: rem(48px) $spacing-1000 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_section {
+  display: grid;
+  gap: $spacing-200;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: $spacing-800;
+
+  :nth-child(2) {
+    grid-row: 2 \1;
+    grid-column: span 2;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-300;
+    text-align: center;
+    padding: 0 1.9rem $spacing-400;
+
+    h1 {
+      color: $slate-900;
+      padding: 0 0.5rem;
+    }
+
+    p {
+      color: $slate-600;
+    }
+    .wrapper-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: $spacing-200;
+    }
+  }
+}
+
+.main_section {
+  padding: $spacing-400 $spacing-400 $spacing-800;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: $spacing-800;
+
+    .image_collage {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      img {
+        border-radius: 8px;
+        width: rem(147.5px);
+      }
+    }
+
+    .content {
+      text-align: center;
+
+      h5 {
+        color: $cyan-600;
+        text-transform: uppercase;
+      }
+
+      h4 {
+        color: $slate-900;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        color: $slate-600;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  margin-top: 7rem;
+  .number {
+    z-index: 3;
+    position: absolute;
+    margin-top: -108px;
+    inset: 0;
+  }
+  .container {
+    position: relative;
+    picture {
+      img {
+        width: 100%;
+      }
+    }
+    .content {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      align-items: center;
+      text-align: center;
+      padding: $spacing-800 $spacing-400;
+
+      p {
+        width: rem(294px);
+      }
+    }
+    .bg-color {
+      position: absolute;
+      background-color: $cyan-600;
+      inset: 0;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media screen and (min-width: rem(375px)) {
+  .text-preset-4 {
+    font-size: $text-preset-4-t-font-size;
+  }
+}
+
+@media screen and (min-width: rem(1024px)) {
+}
+
+@media screen and (min-width: rem(768px)) {
+  .text-preset-1 {
+    font-size: $text-preset-1-t-font-size;
+  }
+  .text-preset-2 {
+    font-size: $text-preset-2-t-font-size;
+  }
+  .text-preset-3 {
+    font-size: $text-preset-3-t-font-size;
+  }
+  .text-preset-4 {
+    font-size: $text-preset-4-t-font-size;
+  }
+  .header_section {
+    grid-template-columns: repeat(2, 1fr);
+
+    :nth-child(2) {
+      grid-row: 2 \1;
+      grid-column: span 2;
+    }
+
+    .hero {
+      max-width: rem(500px);
+      justify-self: center;
+
+      h1 {
+        padding: 0 4rem;
+      }
+
+      .wrapper-btns {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1em;
+      }
+    }
+  }
+
+  .main_section {
+    .wrapper {
+      .image_collage {
+        grid-template-columns: repeat(4, 1fr);
+
+        img {
+          width: rem(152px);
+        }
+      }
+
+      .content {
+        h4 {
+          padding: 0 7rem;
+        }
+        p {
+          padding: 0 6rem;
+        }
+      }
+    }
+  }
+
+  footer .container {
+    .content {
+      padding: $spacing-800 $spacing-400;
+      align-items: center;
+      row-gap: 1rem;
+      text-align: center;
+
+      p {
+        width: 23rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .text-preset-1 {
+    font-size: $text-preset-1-d-font-size;
+  }
+  .text-preset-2 {
+    font-size: $text-preset-2-d-font-size;
+  }
+  .text-preset-3 {
+    font-size: $text-preset-3-d-font-size;
+  }
+  .text-preset-4 {
+    font-size: $text-preset-4-d-font-size;
+  }
+  .nav {
+    padding: $spacing-1000 $spacing-1000 0;
+    img {
+    }
+  }
+  .header_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-900;
+    padding: $spacing-800 0;
+    max-width: rem(1440px);
+
+    :nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .hero {
+      padding: 0;
+
+      h1 {
+        padding: 0;
+      }
+
+      .wrapper-btns {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1em;
+      }
+    }
+  }
+  .main_section {
+    padding: $spacing-700 $spacing-1000 $spacing-900;
+    .wrapper {
+      .image_collage {
+        grid-template-columns: repeat(4, 1fr);
+        img {
+          width: rem(256px);
+        }
+      }
+
+      .content {
+        width: rem(544px);
+        h4 {
+          padding: 0 4rem;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+    }
+  }
+  footer .container {
+    .content {
+      padding: $spacing-1400 $spacing-1000;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      column-gap: 3rem;
+      text-align: left;
+
+      h3 {
+        max-width: rem(445px);
+      }
+    }
+  }
+}

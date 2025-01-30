@@ -116,6 +116,7 @@
   grid-template-columns: repeat(2, 1fr);
   padding-top: 4rem;
   justify-self: center;
+  align-items: center;
 }
 .header_section :nth-child(2) {
   grid-row: 2 \1 ;
@@ -218,12 +219,12 @@ footer .container .bg-color {
   opacity: 0.8;
 }
 
-@media screen and (min-width: 23.4375rem) {
+@media screen and (min-width: 375px) {
   .text-preset-4 {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .text-preset-1 {
     font-size: 3rem;
   }
@@ -266,7 +267,7 @@ footer .container .bg-color {
     padding: 0 7rem;
   }
   .main_section .wrapper .content p {
-    padding: 0 6rem;
+    padding: 0 7rem;
   }
   footer .container .content {
     padding: 4rem 2rem;

@@ -191,6 +191,7 @@ $spacing-50: rem(4px);
   grid-template-columns: repeat(2, 1fr);
   padding-top: $spacing-800;
   justify-self: center;
+  align-items: center;
 
   :nth-child(2) {
     grid-row: 2 \1;
@@ -307,13 +308,13 @@ footer {
   }
 }
 
-@media screen and (min-width: rem(375px)) {
+@media screen and (min-width: 375px) {
   .text-preset-4 {
     font-size: $text-preset-4-t-font-size;
   }
 }
 
-@media screen and (min-width: rem(768px)) {
+@media screen and (min-width: 768px) {
   .text-preset-1 {
     font-size: $text-preset-1-t-font-size;
   }
@@ -366,7 +367,7 @@ footer {
           padding: 0 7rem;
         }
         p {
-          padding: 0 6rem;
+          padding: 0 7rem;
         }
       }
     }
